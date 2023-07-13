@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+    /*border: 1px solid black;*/
+}
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  nav{
+    display: flex;
+    justify-content: space-between;
+  }
+  nav ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  nav ul.menu li {
+    float: left;
+  }
+  
+  nav ul.menu li a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  nav ul.menu li a:hover {
+    background-color: #ddd;
+  }
+  
+  nav ul.menu li ul.submenu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  
+  nav ul.menu li:hover ul.submenu {
+    display: block;
+  }
+  
+  nav ul.menu li ul.submenu li {
+    float: none;
+  }
+  
+  .login-container {
+    float: right;
+  }
+  
+  .login-container a {
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .login-container a:hover {
+    background-color: #ddd;
+  }
+
+  .menu-burger{
+    display: none;
+  }
+  
+  .hero {
+    background-image: url('src/bg1.jpg');
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .hero h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  
+  .hero p {
+    font-size: 16px;
+  }
+  
+  
+  /*Responsive Styles */
+
+ @media (max-width: 768px) {
+    nav ul.menu li {
+      float: none;
+      display: block;
+    }
+  
+    nav ul.menu li ul.submenu {
+      position: static;
+      display: none;
+    }
+  
+    nav ul.menu li:hover ul.submenu {
+      display: none;
+    }
+  
+    .login-container {
+      float: none;
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      padding: 10px;
+    }
+  
+    nav ul.menu li a {
+      padding: 6px 10px;
+    }
+  
+    nav ul.menu li ul.submenu {
+      min-width: 140px;
+    }
+  
+    .hero h1 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+  
+    .hero p {
+      font-size: 14px;
+    }
+  }
+  
